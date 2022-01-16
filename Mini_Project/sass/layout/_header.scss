@@ -1,0 +1,32 @@
+.header{
+    height: 95vh;                                     /* 95vh is 95% of view port height */
+    background-image:linear-gradient(
+        to right bottom, 
+        rgba($color-primary-light, 0.800),                 /* rgba: red green blue apacity(transparency= 80%) */
+        rgba($color-primary-dark, 0.800)),
+    url(../img/hero.jpg);                              /* .. to go up one folder /img to go to image folder in css folder /hero.jpg to select image */
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);     /* https://bennettfeely.com/clippy/ :- website for clip path values of various polygons
+                                                              clip path is used to create a specific polygon out of image
+                                                             it uses coordinate geometry of four corners of image(x y, x y, x y, x y) */
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo {
+        height: 3.5rem;
+    } 
+    
+    &__text-box {
+        position: absolute;
+        top: 40%;                               /* top and left is in relation with parent text-box whereas transform and translate is in relation with element itself (written material) */
+        left: 50%;
+        transform: translate(-50%, -50%);              /* transform and translate to  not relative to parent element but relative to the element itself */
+        text-align: center;
+    }
+}

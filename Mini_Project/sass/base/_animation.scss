@@ -1,0 +1,43 @@
+@keyframes moveInLeft {                   /* helps in creating animation which can be applied anywhere */
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);    /* TO BRING TEXT FROM LEFT TO RIGHT ALONG X AXIS */
+    }
+
+    80% {
+        transform: translateX(2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);            /* let the block be at original position and way */
+    }
+}
+
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);    /* TO BRING TEXT FROM LEFT TO RIGHT ALONG X AXIS */
+    }
+
+    80% {
+        transform: translateX(-2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);            /* let the block be at original position and way */
+    }
+}
+
+@keyframes moveInBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);            /* let the block be at original position and way */
+    }
+}
